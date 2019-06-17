@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// add react router dependncy using yarn add react-router-dom and youll wrap the <App/> component within the <Router> component
+import { BrowserRouter as Router } from "react-router-dom";
+//remember to after creating a CRA.. to cd into the app folder, and then run npm or yarn for react-router-dom
 
 import "./styles.css";
 
@@ -13,4 +16,9 @@ function App() {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  rootElement
+);
